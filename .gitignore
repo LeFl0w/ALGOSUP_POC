@@ -1,6 +1,10 @@
 #output from synthesis
 design.json
-
 #output from place and route
 output.asc
 routed.json
+#output from icetime
+TimeNetlist.v
+#output for timed simulation
+data.vcd
+designDB
