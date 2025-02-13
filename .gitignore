@@ -1,0 +1,6 @@
+#output from synthesis
+design.json
+
+#output from place and route
+output.asc
+routed.json
