@@ -1,7 +1,0 @@
-
-# example.pcf
-set_io --warn-no-port D B5
-set_io --warn-no-port Q B4
-set_io --warn-no-port led3 A2
-set_io --warn-no-port async_reset A1
-set_io --warn-no-port clk J3
