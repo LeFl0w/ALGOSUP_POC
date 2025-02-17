@@ -53,10 +53,8 @@ The example below illustrate tools used to FPGA Simulation and display. It can b
 - linux machine (tested on ubuntu)
 
 ## Installation
-- Download latest osscad suite latest release : https://github.com/YosysHQ/oss-cad-suite-build/releases
-- Extract it
-- Source the osscad environment `source /opt/osscad/oss-cad-suite-linux-x64-20250212/oss-cad-suite/environment`
-You are then ready to go.
+- Download latest impulse design suite 24.3.3.0 from `https://files.nanoxplore.com/f/5f05b9415c604a6ca7e2/?dl=1`
+- Extract it for example in folder `/opt/NanoXplore/Impulse/nxdesignsuite-24.3.0.0/`
 
 ## Getting started
 1. Source the osscad environment

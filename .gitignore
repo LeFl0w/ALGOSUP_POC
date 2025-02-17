@@ -1,10 +1,5 @@
-#output from synthesis
-design.json
-#output from place and route
-output.asc
-routed.json
-#output from icetime
-TimeNetlist.v
+#Nanoxplore project
+./Project
 #output for timed simulation
 data.vcd
 designDB
