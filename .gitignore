@@ -1,6 +1,6 @@
 #Nanoxplore project
-./Project/*
-./logs/
+Project
+logs
 
 #output for timed simulation
 data.vcd
