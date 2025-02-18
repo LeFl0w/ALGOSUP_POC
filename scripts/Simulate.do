@@ -28,13 +28,13 @@ add wave -noupdate /flipflop_tb/D
 add wave -noupdate /flipflop_tb/Q
 add wave -noupdate /flipflop_tb/reset
 add wave -noupdate -divider {flipflop Q2 (with Q3 signal output)}
-add wave /flipflop_tb/dut/r_clk_1
-add wave -noupdate /flipflop_tb/dut/Q2
-add wave -noupdate /flipflop_tb/dut/Q3
+add wave -noupdate /flipflop_tb/dut/r_clk_1
+add wave -noupdate /flipflop_tb/dut/i_Q2_reg/O
+add wave -noupdate /flipflop_tb/dut/i_Q3_reg/I
 add wave -noupdate -divider {flipflop Q3 (with Q4 signal output)}
-add wave /flipflop_tb/dut/r_clk_1
-add wave -noupdate /flipflop_tb/dut/Q3
-add wave -noupdate /flipflop_tb/dut/Q4
+add wave -noupdate /flipflop_tb/dut/r_clk_1
+add wave -noupdate /flipflop_tb/dut/i_Q3_reg/O
+add wave -noupdate /flipflop_tb/dut/i_Q4_reg/I
 WaveRestoreZoom {0 ps} {700 ns}
 
 run -all
