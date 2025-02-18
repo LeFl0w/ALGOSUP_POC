@@ -60,10 +60,15 @@ The example below illustrate tools used to FPGA Simulation and display. It can b
 - Download and install modelsim simulator `https://www.intel.com/content/www/us/en/software-kit/790078/questa-intel-fpgas-pro-edition-software-version-23-3.html`
 - Download nanoxplore licence manager `https://files.nanoxplore.com/f/a342e814bad24a61807f/?dl=1`
 - Extract it for example in folder `/opt/NanoXplore/NXLMD`
-- Ask nanoxplore for a licence by email at `support@nanoxplore.com` mentionning the name of the project `AlgoSUP` and your adress MAC.
+- Ask nanoxplore for a licence by email at `support@nanoxplore.com` mentionning :
+    - the name of the project `AlgoSUP` 
+    - your hostname extracted with command `hostname`
+    - your hostID extracted with command ` /opt/NanoXplore/NXLMD/2.2/bin/lmhostid`
 - launch license server with command  `/opt/NanoXplore/NXLMD-2.2-linux/NXLMD/2.2/bin/x86_64_UBUNTU_18/lmgrd -c /opt/NanoXplore/licence.lic > ~/.log_server_nx.log` 
 - add `export NXLMD_LICENSE_FILE="27000@localhost"` to your environment
 - try launching Nanoxplore Impulse software : `/opt/NanoXplore/Impulse/nxdesignsuite-24.3.0.0/bin/impulse` 
+
+You can consult https://nanoxplore-wiki.atlassian.net/wiki/spaces/NAN/pages/47710209/License+Daemon for additional informations
 
 
 This development flow is similar as the one used by industrial companies
