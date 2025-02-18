@@ -1,0 +1,1 @@
+gtkwave ./Sim/data.vcd

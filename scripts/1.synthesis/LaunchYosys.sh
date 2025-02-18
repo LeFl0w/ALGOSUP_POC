@@ -1,1 +1,0 @@
-yosys -script ./scripts/1.synthesis/yosys.ys 
