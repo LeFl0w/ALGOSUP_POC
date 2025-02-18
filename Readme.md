@@ -55,18 +55,58 @@ The example below illustrate tools used to FPGA Simulation and display. It can b
 ## Installation
 - Download latest impulse design suite 24.3.3.0 from `https://files.nanoxplore.com/f/5f05b9415c604a6ca7e2/?dl=1`
 - Extract it for example in folder `/opt/NanoXplore/Impulse/nxdesignsuite-24.3.0.0/`
+- Download and install modelsim simulator `https://www.intel.com/content/www/us/en/software-kit/790078/questa-intel-fpgas-pro-edition-software-version-23-3.html`
 
-## Getting started
-1. Source the osscad environment
+optional:
+- Download latest osscad suite latest release : https://github.com/YosysHQ/oss-cad-suite-build/releases
+- Extract it for example in folder `/opt/osccad`
+
+
+## Getting started proprietary flow
+This development flow is similar as the one used by industrial companies
+
+1. Execute `scripts/1.LaunchImpulse.sh`. This will execute synthesis, place and route and export a verilog netlist.
+    - You can launch impulse to have a view of the FPGA `/opt/NanoXplore/Impulse/nxdesignsuite-24.3.0.0/bin/impulse`
+    - open the `Project/Impulse_POC_route.nym` project
+    - click on the left on the `floorplan` icon
+    - click on the command `none` button on the top and select `net` or `instance`
+    - click on th fpga matrx to view the requested feature
+2. launch simulation 
+
+## Getting started opensource flow
+
+### installation
+you will have to compile nextpnr with ngultra support.
+1. clone repositories : https://github.com/YosysHQ/nextpnr.git and https://github.com/YosysHQ-GmbH/prjbeyond-db.git
+ Becareful there are submodules so use `--recurse-submodules` option
+2. install prerequisite from https://github.com/YosysHQ/nextpnr?tab=readme-ov-file#prerequisites
+3. execute commands from https://github.com/YosysHQ/nextpnr?tab=readme-ov-file#ng-ultra
+
+
+### Troubleshooting:
+- if cmake is to old on you ubuntu remove it from apt and isntall the version from pip
+        - apt remove cmake -y
+        - pip install cmake --upgrade
+        - create a link from you python cmake to usr/bin/ `sudo ln -s /home/flo/.local/bin/cmake /usr/bin/`
+        - pip install pybind11
+
+### simulation
+This flow is the same as the proprietary one but more complex and some features might be missing.
+
 2. execute `scripts/1.synthesis/LaunchYosys.sh` to perform synthesis
 3. execute `scripts/2.PR/LaunchNextpnr.sh` to perform P&R 
 4. execute `scripts/2.PR/LaunchIcetime.sh` to perform creation of the timing netlist
 5. execute `scripts/3.Simulation/LaunchSimulation.sh` to perform time simulation
 6. execute `scripts/3.Simulation/LaunchGtkwave.sh` to display simulation
 
-## Worth looking at ...
-- Lattice ICE40 FPGA H8x datasheet : it includes architecture definition of the FPGA : https://www.latticesemi.com/view_document?document_id=49312
-- yowasp.org : provide web assembly package for yosis and nextpnr 
-- icestorm : bitstream reverse engineering for ICE40 : https://github.com/YosysHQ/icestorm
-- iceviewer project: an html display for ice40 FPGA : https://github.com/knielsen/ice40_viewer
-- yosys option about ice40 synthesis : https://github.com/YosysHQ/yosys/blob/main/techlibs/ice40/synth_ice40.cc (some verilog tests are available there)
+
+# Worth looking at ...
+- python API for Nanoxplore Impulse : https://files.nanoxplore.com/f/263e38b58862428ebef9/?dl=1
+- nanoxplore wiki :https://nanoxplore-wiki.atlassian.net/wiki/
+- osscad project : https://github.com/YosysHQ/oss-cad-suite-build : it includes:
+    - open source synthetiser: yosys
+    - open source place & route : nextpnr
+    - open source simulator for verilog : icarus verilog
+    - open source simulator for vhdl : ghdl
+    - open source wave display (for simulators): gtkwave
+-

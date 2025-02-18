@@ -1,8 +1,5 @@
 `timescale 1ns/1ps;
-// FPGA projects using Verilog/ VHDL 
-// fpga4student.com
-// Verilog code for D Flip FLop
-// Testbench Verilog code for verification
+
 
 module flipflop_tb();
 reg D;
@@ -10,7 +7,7 @@ reg clk;
 reg reset;
 wire Q;
 
-RisingEdge_DFlipFlop_AsyncResetHigh dut(D,clk,reset,Q);
+RisingEdge_DFlipFlop_AsyncResetHigh dut(.D(D),.clk(clk),.async_reset(reset),.Q(Q));
 
 //create stimuli for clock input
 initial begin

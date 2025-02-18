@@ -1,0 +1,14 @@
+#NxMap Ring configuration CSV export!
+#PADS!
+#HDL Name,#Location,#Standard,#Drive,#SlewRate,#InputDelay Line,#OutputDelay Line,#Differential,#WeakTermination,#Termination,#Terminationreference,#Turbo,#Signal Slope,#Output Capacity,#Register Path
+clk,IOB10_D09P,LVCMOS,2mA,Medium,0,0,False,PullUp,,VT,False,0,0,Auto
+uart_tx,IOB1_D00,LVCMOS,2mA,Medium,0,0,False,PullUp,,VT,False,0,0,Auto
+uart_rx,IOB1_D01,LVCMOS,2mA,Medium,0,0,False,PullUp,,VT,False,0,0,Auto
+!
+#BANKS!
+#Bank Name,#Voltage,#Type
+IOB1,3.3V,Direct
+IOB10,1.8V,Complex
+!
+#CKGS!
+#HDL Name,#Location

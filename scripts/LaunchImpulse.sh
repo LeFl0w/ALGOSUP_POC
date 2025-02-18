@@ -1,1 +1,0 @@
-/opt/NanoXplore/Impulse/nxdesignsuite-24.3.0.0/bin/nxpython scripts/createproject.py

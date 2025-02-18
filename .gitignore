@@ -1,5 +1,7 @@
 #Nanoxplore project
-./Project
+./Project/*
+./logs/
+
 #output for timed simulation
 data.vcd
 designDB
