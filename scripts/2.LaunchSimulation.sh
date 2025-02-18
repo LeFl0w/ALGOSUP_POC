@@ -1,3 +1,4 @@
 #add modelsim binaries in the path first
-
-vsim -do Simulate.do
+mkdir -p Sim
+cd Sim
+vsim -do ../scripts/Simulate.do

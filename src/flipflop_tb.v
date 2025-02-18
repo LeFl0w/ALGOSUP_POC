@@ -12,7 +12,7 @@ RisingEdge_DFlipFlop_AsyncResetHigh dut(.D(D),.clk(clk),.async_reset(reset),.Q(Q
 //create stimuli for clock input
 initial begin
   clk=0;
-     forever #10 clk = ~clk;
+     forever #40 clk = ~clk;
 end
 
 initial begin
@@ -39,7 +39,7 @@ initial begin
     @(posedge clk) ;
     D <= 1;
 
-    #513 $finish;
+    #700 $stop;
     end
 
 endmodule
