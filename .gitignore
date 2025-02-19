@@ -25,3 +25,12 @@ design_flows_examples/vtr/report_unconstrained_timing.hold.rpt
 design_flows_examples/vtr/report_unconstrained_timing.setup.rpt
 design_flows_examples/vtr/vpr_stdout.log
 design_flows_examples/vtr/Sim
+
+#yosys vtr flow netlist output
+netlist.blif
+
+#vtr work dir
+work
+#vtr sim dir
+Sim_vtr
+

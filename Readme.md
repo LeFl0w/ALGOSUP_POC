@@ -123,9 +123,14 @@ This additionnal open source flow seems to handle timing delays.
 ### Install
 - clone repository with submodule vith the Tag v9.0.0
 - run the procedure located at https://github.com/verilog-to-routing/vtr-verilog-to-routing/blob/master/BUILDING.md (you will probably need to use python venv in order to resolve depency failure with system python)
+- add synthetizer parmys to the build by executing `make CMAKE_PARAMS="-DWITH_PARMYS=ON`
 - finish the procedure with command `make install`
 - add the associated `vtr-verilog-to-routing/build/bin/` folder to your path
 
+### Running
+- 
+
+Nota there is a gui available also using `--disp on` option when running `vpr`
 
 
 # Worth looking at ...

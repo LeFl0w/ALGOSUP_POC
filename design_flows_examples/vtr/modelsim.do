@@ -11,7 +11,7 @@ vmap work gate_work
 #Load the verilog files
 vlog -sv -work work {../multiclock_post_synthesis.v}
 vlog -sv -work work {../testbench.v}
-vlog -sv -work work {../primitives.v}
+vlog -sv -work gate_work {../../src/primitives.v}
 
 #Setup the simulation
 vsim -t 1ps -L gate_work -L work -voptargs="+acc" +sdf_verbose +bitblast tb
