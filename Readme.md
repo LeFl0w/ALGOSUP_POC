@@ -124,3 +124,6 @@ For now no opensource flow is indeified to run post pace and route timing simula
     - open source simulator for vhdl : ghdl
     - open source wave display (for simulators): gtkwave
 - yowasp : https://yowasp.org/ : webassembly package for yosys, nextpnr....
+
+- python-sdf-timing library: library to manage sdf file for timing annotation of verilog: https://github.com/chipsalliance/f4pga-sdf-timing
+- Verilog to routing: opensource FPGA framework similar to yosys and nextpnr : https://github.com/verilog-to-routing/vtr-verilog-to-routing
