@@ -4,5 +4,5 @@ logs
 
 #output for timed simulation
 Sim
-nx-example/bitstream.json
-nx-example/netlist.json
+nextpnr_nx_example/bitstream.json
+nextpnr_nx_example/netlist.json

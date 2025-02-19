@@ -54,7 +54,7 @@ The example below illustrate tools used to FPGA Simulation and display. It can b
 
 ## Getting started proprietary flow
 
-### Installation
+### Install
 - Download latest impulse design suite 24.3.3.0 from `https://files.nanoxplore.com/f/5f05b9415c604a6ca7e2/?dl=1`
 - Extract it for example in folder `/opt/NanoXplore/Impulse/nxdesignsuite-24.3.0.0/`
 - Download and install modelsim simulator `https://www.intel.com/content/www/us/en/software-kit/790078/questa-intel-fpgas-pro-edition-software-version-23-3.html`
@@ -82,7 +82,7 @@ This development flow is similar as the one used by industrial companies
 2. launch simulation 
     - you can view it on modelsim or on gtkwave using command `gtkwave ./Sim/data.vcd`
 
-## Getting started opensource flow
+## Getting started opensource flow (nextpnr)
 In this flow you will use:
 - yosys for synthesis
 - Nextpnr for place androute and floorplanning display
@@ -90,7 +90,7 @@ In this flow you will use:
 
 A more detailed example is aviable in branch ice40.
 
-### Installation
+### Install
 you will have to compile nextpnr with ngultra support.
 1. clone repositories : https://github.com/YosysHQ/nextpnr.git and https://github.com/YosysHQ-GmbH/prjbeyond-db.git
  Becareful there are submodules so use `--recurse-submodules` option
@@ -112,7 +112,20 @@ Be careful osscad comes with its own version of `nextpnr-himbaechel` be sure to 
 - if qt5 is missing install it with `sudo apt-get install qtbase5-dev`
 
 ### simulation
-For now no opensource flow is indeified to run post pace and route timing simulation as the timing database for FPGA cells are not available unencrypted.
+For now this opensource flow doesn't seem to run post place and route timing simulation as the timing database for FPGA cells are not available unencrypted.
+
+### Running
+- execute `make` command in the folder `nextpnr_nx_example`
+
+## Getting started opensource flow (VTR)
+This additionnal open source flow seems to handle timing delays.
+
+### Install
+- clone repository with submodule vith the Tag v9.0.0
+- run the procedure located at https://github.com/verilog-to-routing/vtr-verilog-to-routing/blob/master/BUILDING.md (you will probably need to use python venv in order to resolve depency failure with system python)
+
+
+
 
 # Worth looking at ...
 - python API for Nanoxplore Impulse : https://files.nanoxplore.com/f/263e38b58862428ebef9/?dl=1
