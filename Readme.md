@@ -104,7 +104,7 @@ you will have to compile nextpnr with ngultra support.
 Be careful osscad comes with its own version of `nextpnr-himbaechel` be sure to use your compiled version `/usr/local/bin/nextpnr-himbaechel`
 
 ### Troubleshooting:
-- if cmake is to old on you ubuntu remove it from apt and isntall the version from pip
+- if cmake is to old on you ubuntu remove it from apt and install the version from pip
         - apt remove cmake -y
         - pip install cmake --upgrade
         - create a link from you python cmake to usr/bin/ `sudo ln -s /home/flo/.local/bin/cmake /usr/bin/`
@@ -123,7 +123,8 @@ This additionnal open source flow seems to handle timing delays.
 ### Install
 - clone repository with submodule vith the Tag v9.0.0
 - run the procedure located at https://github.com/verilog-to-routing/vtr-verilog-to-routing/blob/master/BUILDING.md (you will probably need to use python venv in order to resolve depency failure with system python)
-
+- finish the procedure with command `make install`
+- add the associated `vtr-verilog-to-routing/build/bin/` folder to your path
 
 
 
