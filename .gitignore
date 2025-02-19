@@ -6,21 +6,22 @@ logs
 Sim
 
 #nextpnr outputs
-nextpnr_nx_example/bitstream.json
-nextpnr_nx_example/netlist.json
+design_flows_examples/nextpnr_nx/bitstream.json
+design_flows_examples/nextpnr_nx/netlist.json
 
 #vtr outputs
-vtr_example/multiclock_post_synthesis.blif
-vtr_example/multiclock_post_synthesis.sdf
-vtr_example/multiclock_post_synthesis.v
-vtr_example/multiclock.net
-vtr_example/multiclock.net.post_routing
-vtr_example/multiclock.place
-vtr_example/multiclock.route
-vtr_example/packing_pin_util.rpt
-vtr_example/pre_pack.report_timing.setup.rpt
-vtr_example/report_timing.hold.rpt
-vtr_example/report_timing.setup.rpt
-vtr_example/report_unconstrained_timing.hold.rpt
-vtr_example/report_unconstrained_timing.setup.rpt
-vtr_example/vpr_stdout.log
+design_flows_examples/vtr/multiclock_post_synthesis.blif
+design_flows_examples/vtr/multiclock_post_synthesis.sdf
+design_flows_examples/vtr/multiclock_post_synthesis.v
+design_flows_examples/vtr/multiclock.net
+design_flows_examples/vtr/multiclock.net.post_routing
+design_flows_examples/vtr/multiclock.place
+design_flows_examples/vtr/multiclock.route
+design_flows_examples/vtr/packing_pin_util.rpt
+design_flows_examples/vtr/pre_pack.report_timing.setup.rpt
+design_flows_examples/vtr/report_timing.hold.rpt
+design_flows_examples/vtr/report_timing.setup.rpt
+design_flows_examples/vtr/report_unconstrained_timing.hold.rpt
+design_flows_examples/vtr/report_unconstrained_timing.setup.rpt
+design_flows_examples/vtr/vpr_stdout.log
+design_flows_examples/vtr/Sim
