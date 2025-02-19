@@ -148,22 +148,22 @@ endmodule
 module DFF #(
     parameter INITIAL_VALUE=1'b0    
 ) (
-    input clk,
+    input clock,
     input D,
     output reg Q
 );
 
     specify
-        (clk => Q) = "";
-        $setup(D, posedge clk, "");
-        $hold(posedge clk, D, "");
+        (clock => Q) = "";
+        $setup(D, posedge clock, "");
+        $hold(posedge clock, D, "");
     endspecify
 
     initial begin
         Q <= INITIAL_VALUE;
     end
 
-    always@(posedge clk) begin
+    always@(posedge clock) begin
         Q <= D;
     end
 endmodule
