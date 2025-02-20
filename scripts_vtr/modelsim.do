@@ -19,14 +19,46 @@ vsim -t 1ps -L gate_work -L work -voptargs="+acc" +sdf_verbose +bitblast flipflo
 
 #Log signal changes to a VCD file
 vcd file sim.vcd
-vcd add /flipflop_tb/dut/*
-vcd add /flipflop_tb/dut/*
 
 #Setup the waveform viewer
 log -r /flipflop_tb/*
-add wave /flipflop_tb/*
+
 view structure
 view signals
+
+onerror {resume}
+quietly WaveActivateNextPane {} 0
+add wave -noupdate -divider {IO signals}
+add wave -noupdate /flipflop_tb/async_reset
+add wave -noupdate /flipflop_tb/clk
+add wave -noupdate /flipflop_tb/D
+add wave -noupdate {/flipflop_tb/dut/\latch_$sdff~0^Q~0_input_0_0 }
+add wave -noupdate {/flipflop_tb/dut/\latch_$sdff~0^Q~0_clock_0_0 }
+add wave -noupdate {/flipflop_tb/dut/\latch_$sdff~0^Q~0_output_0_0 }
+add wave -noupdate {/flipflop_tb/dut/\latch_$sdff~1^Q~0_input_0_0 }
+add wave -noupdate {/flipflop_tb/dut/\latch_$sdff~1^Q~0_clock_0_0 }
+add wave -noupdate {/flipflop_tb/dut/\latch_$sdff~2^Q~0_input_0_0 }
+add wave -noupdate {/flipflop_tb/dut/\latch_$sdff~2^Q~0_clock_0_0 }
+add wave -noupdate {/flipflop_tb/dut/\latch_$sdff~2^Q~0_output_0_0 }
+add wave -noupdate {/flipflop_tb/dut/\latch_$sdff~3^Q~0_input_0_0 }
+add wave -noupdate {/flipflop_tb/dut/\latch_$sdff~3^Q~0_clock_0_0 }
+add wave -noupdate {/flipflop_tb/dut/\latch_$sdff~3^Q~0_output_0_0 }
+add wave -noupdate /flipflop_tb/Q
+add wave -noupdate /flipflop_tb/reset
+add wave -noupdate -divider {Q2 to Q3 data}
+add wave -noupdate {/flipflop_tb/dut/\latch_$sdff~2^Q~0_input_0_0 }
+add wave -noupdate {/flipflop_tb/dut/\latch_$sdff~2^Q~0_output_0_0 }
+add wave -noupdate {/flipflop_tb/dut/\latch_$sdff~3^Q~0_input_0_0 }
+add wave -noupdate -divider {Q2 to Q3 clock}
+add wave -noupdate /flipflop_tb/clk
+add wave -noupdate {/flipflop_tb/dut/\latch_$sdff~3^Q~0_clock_0_0 }
+add wave -noupdate {/flipflop_tb/dut/\latch_$sdff~2^Q~0_clock_0_0 }
+TreeUpdate [SetDefaultTree]
+WaveRestoreCursors {{Cursor 1} {178154 ps} 0}
+quietly wave cursor active 1
+configure wave -timelineunits ps
+update
+WaveRestoreZoom {115257 ps} {205369 ps}
 
 #Run the simulation for 1 microsecond
 run 1us -all
