@@ -4,12 +4,12 @@ This web interface will be used to teach people how the signals propagate inside
 
 ## Glossary
 In this project we will be using the following words and associated definition:
-- **FPGA**: it is an integrated circuit with basic elements and preconfigured electrical signal routes between them. The selected FPGA is a `NAnoXplore NGultra`
+- **FPGA**: it is an integrated circuit with basic elements and preconfigured electrical signal routes between them. The selected FPGA is a `NanoXplore NGultra` (with VTR flow a basic `Xilinx serie 7` model will be used )
 - **Basic Element (BEL)**: these are the hardware electrical ressources available inside the FPGA like fliflop, Look-Up-Table (LUT), Block RAM....
 - **Application** : in this context it will be the function to be executed in the FPGA (developped in verilog).
--  **Synthesis**: translation of the application into an electrical equivalent. IT create a netlist (which can be exported as a netlist). The tool used will be `Impulse` 
-- **P&R**: Place and Route is the packing of the netlist component in the FPGA available BEL (Place). Then a route for signals between each BEL is selected (Route). The tool used will be `Impulse` . A timing netlist is created and can be exported in verilog. The tool used will be `Impulse`
-- **Simulator**: It compiles verilog testbenches and application and execute the simulation of every signal with regard to time evolution. The tool used will be `Modelsim`
+-  **Synthesis**: translation of the application into an electrical equivalent. It creates a netlist (which can be exported as a netlist). The tool used will be `Impulse` (or `yosys` in vtr flow )
+- **P&R**: Place and Route is the packing of the netlist component in the FPGA available BEL (Place). Then a route for signals between each BEL is selected (Route). The tool used will be `Impulse` . A timing netlist is created and can be exported in verilog. The tool used will be `Impulse`  (or `VPR` for place and route in vtr flow )
+- **Simulator**: It compiles verilog testbenches and application and execute the simulation of every signal with regard to time evolution. The tool used will be `Modelsim` (using `icarus verilog` was not achieved yet for VTR flow)
 - **Sofware**: It is the developped web application int he frame of this call for tender.
 
 ## Context
@@ -52,7 +52,7 @@ The example below illustrate tools used to FPGA Simulation and display. It can b
 ## Prerequisite
 - linux machine (tested on ubuntu)
 
-## Getting started proprietary flow
+## Getting started proprietary flow (Nanoxplore)
 
 ### Install
 - Download latest impulse design suite 24.3.3.0 from `https://files.nanoxplore.com/f/5f05b9415c604a6ca7e2/?dl=1`
@@ -82,7 +82,7 @@ This development flow is similar as the one used by industrial companies
 2. launch simulation 
     - you can view it on modelsim or on gtkwave using command `gtkwave ./Sim/data.vcd`
 
-## Getting started opensource flow VTR ( preferred as it handle the full flow up to simulation))
+## Getting started opensource flow VTR ( preferred as it handles the full flow,  up to timing simulation))
 This additionnal open source flow seems to handle timing delays.
 
 ### Install
@@ -95,12 +95,12 @@ This additionnal open source flow seems to handle timing delays.
 ### Running
 - Edit path for VTR binaries in `scripts_vtr/runme.sh` and launch it.
 - Launch scripts_vtr/2.LaunchSimulation.sh (it needs modelsim installation)
-- To be done : provide a script for simulation with icarus verilog and gtkwave 
+- **To be done : provide a script for simulation with icarus verilog and gtkwave **
 
 Nota there is a gui available for VPR using `--disp on` option when running `vpr`
 
 
-## Getting started opensource flow nextpnr (informational as )
+## Getting started opensource flow nextpnr (informational as timing netlist creation will finish with Nanoxplore impulse)
 In this flow you will use:
 - yosys for synthesis
 - Nextpnr for place androute and floorplanning display
