@@ -23,4 +23,5 @@ prj.save('routed_POC.vhd')
 prj.save('routed_POC_worst.sdf','worstcase')
 prj.save('routed_POC.v')
 
+#prj.generateBitstream(sys.argv[2])
 prj.save(sys.argv[3])
