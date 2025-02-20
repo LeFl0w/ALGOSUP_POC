@@ -14,8 +14,7 @@ vlog -sv -work work {../src/flipflop_tb_vtr.v}
 vlog -sv -work gate_work {../src/primitives.v}
 
 #Setup the simulation
-#vsim -t 1ps -L gate_work -L work -voptargs="+acc" +sdf_verbose +bitblast flipflop_tb -sdfmax dut=../work/RisingEdge_DFlipFlop_AsyncResetHigh_post_synthesis.sdf
-vsim -glsini -t 1ps -L gate_work -L work -voptargs="+acc" +sdf_verbose +bitblast flipflop_tb 
+vsim -t 1ps -L gate_work -L work -voptargs="+acc" +sdf_verbose +bitblast flipflop_tb -sdfmax dut=../work/RisingEdge_DFlipFlop_AsyncResetHigh_post_synthesis.sdf
 
 
 #Log signal changes to a VCD file

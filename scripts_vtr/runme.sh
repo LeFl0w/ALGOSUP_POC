@@ -7,6 +7,6 @@ cd work
 
 
 #create timing with vpr
-vpr ../src/simple-7series.xml flipflop.parmys.blif --gen_post_synthesis_netlist on 
+vpr ../src/simple-7series.xml flipflop.parmys.blif --gen_post_synthesis_netlist on  --post_synth_netlist_unconn_inputs gnd
 #--disp on
 
