@@ -52,8 +52,3 @@ getProject().save('../routed_POC.vhd')
 getProject().save('../routed_POC_worst.sdf','worstcase')
 getProject().save('../routed_POC.v')
 
-
-#this doesn't seem to work
-#getProject().generateSTANetlist('../sta_best_POC','bestcase')
-#getProject().generateSTANetlist('../sta_typical_POC','typical')
-#getProject().generateSTANetlist('../sta_worst_POC','worstcase')

@@ -1,0 +1,4 @@
+ 
+read -vlog95 ./src/flipflop.v
+hierarchy -top RisingEdge_DFlipFlop_AsyncResetHigh
+synth_ice40 -json design.json

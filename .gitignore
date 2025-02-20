@@ -4,5 +4,41 @@ logs
 
 #output for timed simulation
 Sim
-nx-example/bitstream.json
-nx-example/netlist.json
+
+#nextpnr outputs
+design_flows_examples/nextpnr_nx/bitstream.json
+design_flows_examples/nextpnr_nx/netlist.json
+design_flows_examples/nextpnr_nx/logsPython
+
+#vtr outputs
+design_flows_examples/vtr/multiclock_post_synthesis.blif
+design_flows_examples/vtr/multiclock_post_synthesis.sdf
+design_flows_examples/vtr/multiclock_post_synthesis.v
+design_flows_examples/vtr/multiclock.net
+design_flows_examples/vtr/multiclock.net.post_routing
+design_flows_examples/vtr/multiclock.place
+design_flows_examples/vtr/multiclock.route
+design_flows_examples/vtr/packing_pin_util.rpt
+design_flows_examples/vtr/pre_pack.report_timing.setup.rpt
+design_flows_examples/vtr/report_timing.hold.rpt
+design_flows_examples/vtr/report_timing.setup.rpt
+design_flows_examples/vtr/report_unconstrained_timing.hold.rpt
+design_flows_examples/vtr/report_unconstrained_timing.setup.rpt
+design_flows_examples/vtr/vpr_stdout.log
+design_flows_examples/vtr/Sim
+
+#yosys vtr flow netlist output
+netlist.blif
+
+#vtr work dir
+work
+#vtr sim dir
+Sim_vtr
+
+#nextpnrflow output
+design_flows_examples/nextpnr_nx/bitstream.nxb
+design_flows_examples/nextpnr_nx/bitstream.v
+design_flows_examples/nextpnr_nx/routed_POC_worst.sdf
+design_flows_examples/nextpnr_nx/routed_POC.v
+design_flows_examples/nextpnr_nx/routed_POC.vhd
+design_flows_examples/nextpnr_nx/stepDurations.json
