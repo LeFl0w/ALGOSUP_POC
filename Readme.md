@@ -104,9 +104,7 @@ Nota there is a gui available for VPR using `--disp on` option when running `vpr
 In this flow you will use:
 - yosys for synthesis
 - Nextpnr for place androute and floorplanning display
-- for timing simulation there is no opensource way for now. the flow would be to import into Impulse the output of the nextpnr P&R. For now it is not certain it is feasible.
-
-A more detailed example is aviable in branch ice40.
+- for timing simulation there is no opensource way for now. The flow would be to import into Impulse the output of the nextpnr P&R.
 
 ### Install
 you will have to compile nextpnr with ngultra support.
