@@ -82,7 +82,25 @@ This development flow is similar as the one used by industrial companies
 2. launch simulation 
     - you can view it on modelsim or on gtkwave using command `gtkwave ./Sim/data.vcd`
 
-## Getting started opensource flow (nextpnr)
+## Getting started opensource flow VTR ( preferred as it handle the full flow up to simulation))
+This additionnal open source flow seems to handle timing delays.
+
+### Install
+- clone repository with submodule vith the Tag v9.0.0
+- run the procedure located at https://github.com/verilog-to-routing/vtr-verilog-to-routing/blob/master/BUILDING.md (you will probably need to use python venv in order to resolve depency failure with system python)
+- add synthetizer parmys to the build by executing `make CMAKE_PARAMS="-DWITH_PARMYS=ON`
+- finish the procedure with command `make install`
+- add the associated `vtr-verilog-to-routing/build/bin/` folder to your path
+
+### Running
+- Edit path for VTR binaries in `scripts_vtr/runme.sh` and launch it.
+- Launch scripts_vtr/2.LaunchSimulation.sh (it needs modelsim installation)
+- To be done : provide a script for simulation with icarus verilog and gtkwave 
+
+Nota there is a gui available for VPR using `--disp on` option when running `vpr`
+
+
+## Getting started opensource flow nextpnr (informational as )
 In this flow you will use:
 - yosys for synthesis
 - Nextpnr for place androute and floorplanning display
@@ -111,26 +129,11 @@ Be careful osscad comes with its own version of `nextpnr-himbaechel` be sure to 
         - pip install pybind11
 - if qt5 is missing install it with `sudo apt-get install qtbase5-dev`
 
-### simulation
-For now this opensource flow doesn't seem to run post place and route timing simulation as the timing database for FPGA cells are not available unencrypted.
-
 ### Running
-- execute `make` command in the folder `nextpnr_nx_example`
-
-## Getting started opensource flow (VTR)
-This additionnal open source flow seems to handle timing delays.
-
-### Install
-- clone repository with submodule vith the Tag v9.0.0
-- run the procedure located at https://github.com/verilog-to-routing/vtr-verilog-to-routing/blob/master/BUILDING.md (you will probably need to use python venv in order to resolve depency failure with system python)
-- add synthetizer parmys to the build by executing `make CMAKE_PARAMS="-DWITH_PARMYS=ON`
-- finish the procedure with command `make install`
-- add the associated `vtr-verilog-to-routing/build/bin/` folder to your path
-
-### Running
-- 
-
-Nota there is a gui available also using `--disp on` option when running `vpr`
+- edit`design_flows_examples/nextpnr_nx/Makefile` to fill you binaries path
+- execute `make clean all` command in the folder `design_flows_examples/nextpnr_nx_example`
+  this will synthesis with yosys, P&R with nextpnr and create a timing model with NAnaoxplore Impulse
+- execute `design_flows_examples/nextpnr_nx/2.LaunchSimulation.sh` in folder `design_flows_examples/nextpnr_nx_example` to perform simulation
 
 
 # Worth looking at ...

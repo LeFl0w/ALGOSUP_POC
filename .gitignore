@@ -8,6 +8,7 @@ Sim
 #nextpnr outputs
 design_flows_examples/nextpnr_nx/bitstream.json
 design_flows_examples/nextpnr_nx/netlist.json
+design_flows_examples/nextpnr_nx/logsPython
 
 #vtr outputs
 design_flows_examples/vtr/multiclock_post_synthesis.blif
@@ -34,3 +35,10 @@ work
 #vtr sim dir
 Sim_vtr
 
+#nextpnrflow output
+design_flows_examples/nextpnr_nx/bitstream.nxb
+design_flows_examples/nextpnr_nx/bitstream.v
+design_flows_examples/nextpnr_nx/routed_POC_worst.sdf
+design_flows_examples/nextpnr_nx/routed_POC.v
+design_flows_examples/nextpnr_nx/routed_POC.vhd
+design_flows_examples/nextpnr_nx/stepDurations.json
