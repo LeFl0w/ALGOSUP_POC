@@ -32,11 +32,12 @@ The aim of this project is to merge the two views : 2D floorplan with associated
 - It includes a 2D view of used BEL inside the FPGA, the routes used by each signals.
 - Student can navigate (zoom, move) inside the 2D view.
 - Student can select one of the preloaded application examples.
-- It implements a play button to run the application (thus see how every signals proppagate in the FPGA) at a different reducing factors speed (x1, x2, x4...)
+- It implements a play button to run the application (thus see how every signals propagate in the FPGA) at a different reducing factors speed (x1, x2, x4...) . ou can also implement a step butotn
 - It implements a pause/resume button.
 
 ### 3. Interface for the backend side (teacher use)
 - Teacher will provide verilog application and a verilog tesbench. The backend will create the necessary data to be loaded by the webserver for the webpage.
+This step might be very diffult to achieve, therefore the definition of an intermediary pivot file format 
 
 ## Expected Deliverables
 - Source code on a GIT repository
@@ -47,10 +48,10 @@ The aim of this project is to merge the two views : 2D floorplan with associated
 -------------------------------------------------
 
 For graphical display you will need two inputs :
-- a netlist schematic (in verilog format)
-- a standard delay file (SDF format)
+- a netlist schematic (in verilog format) => elements to be represented on screen
+- a standard delay file (SDF format)      => timing propagation delay for signals between each element
 
-The `Example` folder will collect examples of such files. These files have been created with the VTR flow explained in `FPGA_Toolchain.md`
+The `Example` folder will collect examples of such files. 
 
 
 -------------------------------------------------
