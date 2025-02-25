@@ -1,0 +1,173 @@
+(DELAYFILE
+  (SDFVERSION "3.0")
+  (DESIGN "RisingEdge_DFlipFlop_AsyncResetHigh")
+  (DATE "Thu Feb 20 12:22:52 2025")
+  (VENDOR "NanoXplore")
+  (PROGRAM "Impulse")
+  (VERSION "v24.3.0.0-20241220T085154")
+  (DIVIDER /)
+  (VOLTAGE 0.95::0.95)
+  (PROCESS "1.000::1.000")
+  (TEMPERATURE 125::125)
+  (TIMESCALE 1.0 ns)
+
+  (CELL (CELLTYPE "RisingEdge_DFlipFlop_AsyncResetHigh")
+    (INSTANCE)
+      (DELAY (ABSOLUTE
+        (INTERCONNECT i_Q1_NX_DFF_O_fe_D/O i_Q2_NX_DFF_O_fe_D/I (0.212::0.225) (0.212::0.225))
+        (INTERCONNECT i_Q2_NX_DFF_O_fe_D/O i_Q3_NX_DFF_O_fe_D/I (0.207::0.221) (0.207::0.221))
+        (INTERCONNECT i_Q3_NX_DFF_O_fe_D/O i_Q4_NX_DFF_O_fe_D/I (0.156::0.185) (0.156::0.185))
+        (INTERCONNECT i_Q4_NX_DFF_I_fe_D/O i_Q_iob/I (2.976::3.425) (2.976::3.425))
+        (INTERCONNECT i_Q4_NX_DFF_O_fe_D/O i_Q4_NX_DFF_I_fe_D/I (0.156::0.177) (0.156::0.177))
+        (INTERCONNECT i_D_iob/O i_Q1_NX_DFF_O_fe_D/I (3.031::3.939) (3.031::3.939))
+        (INTERCONNECT i_async_reset_iob/O i_Q1_NX_DFF_O_fe_D/R (11.943::13.253) (11.943::13.253))
+        (INTERCONNECT i_async_reset_iob/O i_Q2_NX_DFF_O_fe_D/R (11.943::13.253) (11.943::13.253))
+        (INTERCONNECT i_async_reset_iob/O i_Q3_NX_DFF_O_fe_D/R (11.943::13.253) (11.943::13.253))
+        (INTERCONNECT i_async_reset_iob/O i_Q4_NX_DFF_I_fe_D/R (11.943::13.253) (11.943::13.253))
+        (INTERCONNECT i_async_reset_iob/O i_Q4_NX_DFF_O_fe_D/R (11.943::13.253) (11.943::13.253))
+        (INTERCONNECT i_clk_iob/O i_IOB10_iom/P19RI (0.000::0.000) (0.000::0.000))
+        (INTERCONNECT i_IOB10_iom/CKO2 i_Q1_NX_DFF_O_fe_D/CK (6.712::7.057) (6.712::7.057))
+        (INTERCONNECT i_IOB10_iom/CKO2 i_Q2_NX_DFF_O_fe_D/CK (6.712::7.057) (6.712::7.057))
+        (INTERCONNECT i_IOB10_iom/CKO2 i_Q3_NX_DFF_O_fe_D/CK (6.712::7.057) (6.712::7.057))
+        (INTERCONNECT i_IOB10_iom/CKO2 i_Q4_NX_DFF_I_fe_D/CK (6.712::7.057) (6.712::7.057))
+        (INTERCONNECT i_IOB10_iom/CKO2 i_Q4_NX_DFF_O_fe_D/CK (6.712::7.057) (6.712::7.057))
+      ) )
+  )
+
+  (CELL
+    (CELLTYPE "NX_DFF")
+    (INSTANCE i_Q1_NX_DFF_O_fe_D)
+      (DELAY
+        (ABSOLUTE
+          (IOPATH CK O (0.247::0.281) (0.247::0.281))
+          (IOPATH R O (0.313::0.337) (0.313::0.337))
+        )
+      )
+      (TIMINGCHECK
+        (SETUPHOLD I CK (0.232::0.232) (-0.102::-0.102))
+        (RECREM R CK (0.209::0.209) (-0.194::-0.194))
+      )
+  )
+
+  (CELL
+    (CELLTYPE "NX_DFF")
+    (INSTANCE i_Q2_NX_DFF_O_fe_D)
+      (DELAY
+        (ABSOLUTE
+          (IOPATH CK O (0.247::0.281) (0.247::0.281))
+          (IOPATH R O (0.313::0.337) (0.313::0.337))
+        )
+      )
+      (TIMINGCHECK
+        (SETUPHOLD I CK (0.232::0.232) (-0.102::-0.102))
+        (RECREM R CK (0.209::0.209) (-0.194::-0.194))
+      )
+  )
+
+  (CELL
+    (CELLTYPE "NX_DFF")
+    (INSTANCE i_Q3_NX_DFF_O_fe_D)
+      (DELAY
+        (ABSOLUTE
+          (IOPATH CK O (0.247::0.281) (0.247::0.281))
+          (IOPATH R O (0.313::0.337) (0.313::0.337))
+        )
+      )
+      (TIMINGCHECK
+        (SETUPHOLD I CK (0.232::0.232) (-0.102::-0.102))
+        (RECREM R CK (0.209::0.209) (-0.194::-0.194))
+      )
+  )
+
+  (CELL
+    (CELLTYPE "NX_DFF")
+    (INSTANCE i_Q4_NX_DFF_I_fe_D)
+      (DELAY
+        (ABSOLUTE
+          (IOPATH CK O (0.247::0.281) (0.247::0.281))
+          (IOPATH R O (0.313::0.337) (0.313::0.337))
+        )
+      )
+      (TIMINGCHECK
+        (SETUPHOLD I CK (0.232::0.232) (-0.102::-0.102))
+        (RECREM R CK (0.209::0.209) (-0.194::-0.194))
+      )
+  )
+
+  (CELL
+    (CELLTYPE "NX_DFF")
+    (INSTANCE i_Q4_NX_DFF_O_fe_D)
+      (DELAY
+        (ABSOLUTE
+          (IOPATH CK O (0.247::0.281) (0.247::0.281))
+          (IOPATH R O (0.313::0.337) (0.313::0.337))
+        )
+      )
+      (TIMINGCHECK
+        (SETUPHOLD I CK (0.232::0.232) (-0.102::-0.102))
+        (RECREM R CK (0.209::0.209) (-0.194::-0.194))
+      )
+  )
+
+  (CELL
+    (CELLTYPE "NX_IOB_I")
+    (INSTANCE i_D_iob)
+      (DELAY
+        (ABSOLUTE
+          (IOPATH IO O (0.507::0.558) (0.507::0.558))
+        )
+        (INCREMENT
+          (IOPATH IO O (0.000::0.000) (0.000::0.000))
+        )
+      )
+  )
+
+  (CELL
+    (CELLTYPE "NX_IOB_I")
+    (INSTANCE i_async_reset_iob)
+      (DELAY
+        (ABSOLUTE
+          (IOPATH IO O (0.507::0.558) (0.507::0.558))
+        )
+        (INCREMENT
+          (IOPATH IO O (0.000::0.000) (0.000::0.000))
+        )
+      )
+  )
+
+  (CELL
+    (CELLTYPE "NX_IOB_I")
+    (INSTANCE i_clk_iob)
+      (DELAY
+        (ABSOLUTE
+          (IOPATH IO O (0.563::0.613) (0.563::0.613))
+        )
+        (INCREMENT
+          (IOPATH IO O (0.000::0.000) (0.000::0.000))
+        )
+      )
+  )
+
+  (CELL
+    (CELLTYPE "NX_IOB_O")
+    (INSTANCE i_Q_iob)
+      (DELAY
+        (ABSOLUTE
+          (IOPATH I IO (1.743::1.748) (1.743::1.748))
+        )
+        (INCREMENT
+          (IOPATH I IO (0.000::0.000) (0.000::0.000))
+        )
+      )
+  )
+
+  (CELL
+    (CELLTYPE "NX_IOM_U")
+    (INSTANCE i_IOB10_iom)
+      (DELAY
+        (ABSOLUTE
+          (IOPATH P19RI CKO2 (0.155::0.174) (0.155::0.174))
+        )
+      )
+  )
+)
