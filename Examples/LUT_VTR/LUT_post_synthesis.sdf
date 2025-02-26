@@ -1,0 +1,73 @@
+(DELAYFILE
+    (SDFVERSION "2.1")
+    (DESIGN "LUT")
+    (VENDOR "verilog-to-routing")
+    (PROGRAM "vpr")
+    (VERSION "9.0.0-dev+v8.0.0-11943-g8cb20aa52-dirty")
+    (DIVIDER /)
+    (TIMESCALE 1 ps)
+
+    (CELL
+        (CELLTYPE "fpga_interconnect")
+        (INSTANCE routing_segment_I1_output_0_0_to_lut_O1_input_0_4)
+        (DELAY
+            (ABSOLUTE
+                (IOPATH datain dataout (1921.19:1921.19:1921.19) (1921.19:1921.19:1921.19))
+            )
+        )
+    )
+
+    (CELL
+        (CELLTYPE "fpga_interconnect")
+        (INSTANCE routing_segment_I2_output_0_0_to_lut_O1_input_0_2)
+        (DELAY
+            (ABSOLUTE
+                (IOPATH datain dataout (387.155:387.155:387.155) (387.155:387.155:387.155))
+            )
+        )
+    )
+
+    (CELL
+        (CELLTYPE "fpga_interconnect")
+        (INSTANCE routing_segment_I3_output_0_0_to_lut_O1_input_0_0)
+        (DELAY
+            (ABSOLUTE
+                (IOPATH datain dataout (852.141:852.141:852.141) (852.141:852.141:852.141))
+            )
+        )
+    )
+
+    (CELL
+        (CELLTYPE "fpga_interconnect")
+        (INSTANCE routing_segment_I4_output_0_0_to_lut_O1_input_0_1)
+        (DELAY
+            (ABSOLUTE
+                (IOPATH datain dataout (621.859:621.859:621.859) (621.859:621.859:621.859))
+            )
+        )
+    )
+
+    (CELL
+        (CELLTYPE "fpga_interconnect")
+        (INSTANCE routing_segment_lut_O1_output_0_0_to_O1_input_0_0)
+        (DELAY
+            (ABSOLUTE
+                (IOPATH datain dataout (1131.31:1131.31:1131.31) (1131.31:1131.31:1131.31))
+            )
+        )
+    )
+
+    (CELL
+        (CELLTYPE "LUT_K")
+        (INSTANCE lut_O1)
+        (DELAY
+            (ABSOLUTE
+                (IOPATH in[0] out (152:152:152) (152:152:152))
+                (IOPATH in[1] out (152:152:152) (152:152:152))
+                (IOPATH in[2] out (150:150:150) (150:150:150))
+                (IOPATH in[4] out (118:118:118) (118:118:118))
+            )
+        )
+    )
+    
+)

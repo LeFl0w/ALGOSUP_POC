@@ -1,0 +1,86 @@
+(DELAYFILE
+    (SDFVERSION "2.1")
+    (DESIGN "FF2_norst")
+    (VENDOR "verilog-to-routing")
+    (PROGRAM "vpr")
+    (VERSION "9.0.0-dev+v8.0.0-11943-g8cb20aa52-dirty")
+    (DIVIDER /)
+    (TIMESCALE 1 ps)
+
+    (CELL
+        (CELLTYPE "fpga_interconnect")
+        (INSTANCE routing_segment_D_output_0_0_to_latch_\$dff\~1\^Q\~0_input_0_0)
+        (DELAY
+            (ABSOLUTE
+                (IOPATH datain dataout (407.526:407.526:407.526) (407.526:407.526:407.526))
+            )
+        )
+    )
+
+    (CELL
+        (CELLTYPE "fpga_interconnect")
+        (INSTANCE routing_segment_clk_output_0_0_to_latch_\$dff\~1\^Q\~0_clock_0_0)
+        (DELAY
+            (ABSOLUTE
+                (IOPATH datain dataout (10:10:10) (10:10:10))
+            )
+        )
+    )
+
+    (CELL
+        (CELLTYPE "fpga_interconnect")
+        (INSTANCE routing_segment_clk_output_0_0_to_latch_Q_clock_0_0)
+        (DELAY
+            (ABSOLUTE
+                (IOPATH datain dataout (10:10:10) (10:10:10))
+            )
+        )
+    )
+
+    (CELL
+        (CELLTYPE "fpga_interconnect")
+        (INSTANCE routing_segment_latch_Q_output_0_0_to_Q_input_0_0)
+        (DELAY
+            (ABSOLUTE
+                (IOPATH datain dataout (1090.38:1090.38:1090.38) (1090.38:1090.38:1090.38))
+            )
+        )
+    )
+
+    (CELL
+        (CELLTYPE "fpga_interconnect")
+        (INSTANCE routing_segment_latch_\$dff\~1\^Q\~0_output_0_0_to_latch_Q_input_0_0)
+        (DELAY
+            (ABSOLUTE
+                (IOPATH datain dataout (248:248:248) (248:248:248))
+            )
+        )
+    )
+
+    (CELL
+        (CELLTYPE "DFF")
+        (INSTANCE latch_\$dff\~1\^Q\~0)
+        (DELAY
+            (ABSOLUTE
+                (IOPATH (posedge clock) Q (303:303:303) (303:303:303))
+            )
+        )
+        (TIMINGCHECK
+            (SETUP D (posedge clock) (-46:-46:-46))
+        )
+    )
+    
+    (CELL
+        (CELLTYPE "DFF")
+        (INSTANCE latch_Q)
+        (DELAY
+            (ABSOLUTE
+                (IOPATH (posedge clock) Q (303:303:303) (303:303:303))
+            )
+        )
+        (TIMINGCHECK
+            (SETUP D (posedge clock) (-46:-46:-46))
+        )
+    )
+    
+)
