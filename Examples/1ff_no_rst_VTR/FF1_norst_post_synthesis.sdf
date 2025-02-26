@@ -1,0 +1,53 @@
+(DELAYFILE
+    (SDFVERSION "2.1")
+    (DESIGN "FF1_norst")
+    (VENDOR "verilog-to-routing")
+    (PROGRAM "vpr")
+    (VERSION "9.0.0-dev+v8.0.0-11943-g8cb20aa52-dirty")
+    (DIVIDER /)
+    (TIMESCALE 1 ps)
+
+    (CELL
+        (CELLTYPE "fpga_interconnect")
+        (INSTANCE routing_segment_D_output_0_0_to_latch_Q_input_0_0)
+        (DELAY
+            (ABSOLUTE
+                (IOPATH datain dataout (1022.2:1022.2:1022.2) (1022.2:1022.2:1022.2))
+            )
+        )
+    )
+
+    (CELL
+        (CELLTYPE "fpga_interconnect")
+        (INSTANCE routing_segment_clk_output_0_0_to_latch_Q_clock_0_0)
+        (DELAY
+            (ABSOLUTE
+                (IOPATH datain dataout (10:10:10) (10:10:10))
+            )
+        )
+    )
+
+    (CELL
+        (CELLTYPE "fpga_interconnect")
+        (INSTANCE routing_segment_latch_Q_output_0_0_to_Q_input_0_0)
+        (DELAY
+            (ABSOLUTE
+                (IOPATH datain dataout (1079.77:1079.77:1079.77) (1079.77:1079.77:1079.77))
+            )
+        )
+    )
+
+    (CELL
+        (CELLTYPE "DFF")
+        (INSTANCE latch_Q)
+        (DELAY
+            (ABSOLUTE
+                (IOPATH (posedge clock) Q (303:303:303) (303:303:303))
+            )
+        )
+        (TIMINGCHECK
+            (SETUP D (posedge clock) (-46:-46:-46))
+        )
+    )
+    
+)

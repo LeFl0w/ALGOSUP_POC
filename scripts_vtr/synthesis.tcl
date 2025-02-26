@@ -1,7 +1,7 @@
 #set main project location
 set Orig_Proj /home/flo/FLORENT/GIT/ALGOSUP_POC
 #set your file input
-set source_verilog $Orig_Proj/Examples/2ffs_VTR/flipflop.v
+set source_verilog $Orig_Proj/Examples/2ffs_no_rst_VTR/flipflop.v
 #set architexture file 
 set arch_file  $Orig_Proj/src/simple-7series.xml
 
