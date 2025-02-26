@@ -1,7 +1,7 @@
 #set main project location
 set Orig_Proj /home/flo/FLORENT/GIT/ALGOSUP_POC
 #set your file input
-set source_verilog $Orig_Proj/Examples/2ffs_no_rst_VTR/flipflop.v
+set source_verilog $Orig_Proj/Examples/LUT_VTR/FullLUT.v
 #set architexture file 
 set arch_file  $Orig_Proj/src/simple-7series.xml
 
@@ -26,6 +26,7 @@ select -assert-none %
 select -clear
 
 hierarchy -check -auto-top -purge_lib
+freduce
 procs
 opt_expr
 opt_clean
@@ -39,7 +40,9 @@ peepopt
 opt_clean
 share
 opt -full
-memory -nomap
+#  memory -nomap is replaced by memory to avoid mixing with LUT extraction
+memory
+
 flatten
 opt -full
 techmap -map +/parmys/adff2dff.v
@@ -56,6 +59,10 @@ techmap
 opt -fast
 dffunmap
 opt -fast -noff
+
+#pack LUT4
+flowmap -maxlut 4
+clean
 
 #autoname
 stat
