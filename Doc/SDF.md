@@ -7,7 +7,7 @@ when you display the post place and route netlist `Examples/1ff_no_rst_VTR/FF1_n
 
 ![Schematic view of example post place and route](./assets/shematic.png)
 
-There are new elements calls fpga interconnect which were added. They are virtual element created in order to collect wire delay timing from SDC. These elements are not physically real. They should not be displayed on the final graphic. The real display would be mode like this:
+There are new elements called fpga interconnect which were added. They are virtual elements created in order to collect wire delay timing from SDC. These elements are not physically real. They should not be displayed on the final graphic. The real display would be mode like this:
 
 ![Real schematic view of example](./assets/real example.png)
 
