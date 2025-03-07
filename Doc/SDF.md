@@ -9,7 +9,7 @@ when you display the post place and route netlist `Examples/1ff_no_rst_VTR/FF1_n
 
 There are new elements called fpga interconnect which were added. They are virtual elements created in order to collect wire delay timing from SDC. These elements are not physically real. They should not be displayed on the final graphic. The real display would be mode like this:
 
-![Real schematic view of example](./assets/real example.png)
+![Real schematic view of example](./assets/real%20example.png)
 
 ## SDF timing extraction 
 SDF file `Examples/1ff_no_rst_VTR/FF1_norst_post_synthesis.sdf` add timing information for its associated verilog netlist file `Examples/1ff_no_rst_VTR/FF1_norst_post_synthesis.v`
