@@ -9,10 +9,20 @@
 
     (CELL
         (CELLTYPE "fpga_interconnect")
-        (INSTANCE routing_segment_D_output_0_0_to_lut_\$auto\$rtlil\.cc\:2714\:MuxGate\$139_input_0_3)
+        (INSTANCE routing_segment_D_output_0_0_to_lut_\$auto\$rtlil\.cc\:2714\:MuxGate\$140_input_0_2)
         (DELAY
             (ABSOLUTE
-                (IOPATH datain dataout (1693.56:1693.56:1693.56) (1693.56:1693.56:1693.56))
+                (IOPATH datain dataout (235.697:235.697:235.697) (235.697:235.697:235.697))
+            )
+        )
+    )
+
+    (CELL
+        (CELLTYPE "fpga_interconnect")
+        (INSTANCE routing_segment_reset_output_0_0_to_lut_\$auto\$rtlil\.cc\:2714\:MuxGate\$140_input_0_1)
+        (DELAY
+            (ABSOLUTE
+                (IOPATH datain dataout (617.438:617.438:617.438) (617.438:617.438:617.438))
             )
         )
     )
@@ -29,37 +39,17 @@
 
     (CELL
         (CELLTYPE "fpga_interconnect")
-        (INSTANCE routing_segment_async_reset_output_0_0_to_lut_\$auto\$rtlil\.cc\:2714\:MuxGate\$139_input_0_1)
-        (DELAY
-            (ABSOLUTE
-                (IOPATH datain dataout (463.327:463.327:463.327) (463.327:463.327:463.327))
-            )
-        )
-    )
-
-    (CELL
-        (CELLTYPE "fpga_interconnect")
-        (INSTANCE routing_segment_latch_Q_output_0_0_to_lut_\$auto\$rtlil\.cc\:2714\:MuxGate\$139_input_0_2)
-        (DELAY
-            (ABSOLUTE
-                (IOPATH datain dataout (0:0:0) (0:0:0))
-            )
-        )
-    )
-
-    (CELL
-        (CELLTYPE "fpga_interconnect")
         (INSTANCE routing_segment_latch_Q_output_0_0_to_Q_input_0_0)
         (DELAY
             (ABSOLUTE
-                (IOPATH datain dataout (2304.7:2304.7:2304.7) (2304.7:2304.7:2304.7))
+                (IOPATH datain dataout (1079.77:1079.77:1079.77) (1079.77:1079.77:1079.77))
             )
         )
     )
 
     (CELL
         (CELLTYPE "fpga_interconnect")
-        (INSTANCE routing_segment_lut_\$auto\$rtlil\.cc\:2714\:MuxGate\$139_output_0_0_to_latch_Q_input_0_0)
+        (INSTANCE routing_segment_lut_\$auto\$rtlil\.cc\:2714\:MuxGate\$140_output_0_0_to_latch_Q_input_0_0)
         (DELAY
             (ABSOLUTE
                 (IOPATH datain dataout (96:96:96) (96:96:96))
@@ -69,12 +59,11 @@
 
     (CELL
         (CELLTYPE "LUT_K")
-        (INSTANCE lut_\$auto\$rtlil\.cc\:2714\:MuxGate\$139)
+        (INSTANCE lut_\$auto\$rtlil\.cc\:2714\:MuxGate\$140)
         (DELAY
             (ABSOLUTE
                 (IOPATH in[1] out (152:152:152) (152:152:152))
                 (IOPATH in[2] out (150:150:150) (150:150:150))
-                (IOPATH in[3] out (150:150:150) (150:150:150))
             )
         )
     )
