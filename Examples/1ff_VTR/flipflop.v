@@ -1,16 +1,16 @@
 
-module FF1(D,clk,async_reset,Q);
+module FF1(D,clk,reset,Q);
     input D;            // Data input
     input clk;          // clock input
-    input async_reset;  // asynchronous reset high level
+    input reset;  // asynchronous reset high level
     output reg Q;       // output Q
    
 
 //simple flipflop example
-    always @(posedge clk or posedge async_reset)
+    always @(posedge clk)
         begin
-            if(async_reset==1'b1)
-                 Q1 <= 1'b0;
+            if(reset==1'b1)
+                 Q <= 1'b0;
             else
         Q <= D;
     end
